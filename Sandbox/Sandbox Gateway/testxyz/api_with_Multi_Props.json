@@ -25,7 +25,7 @@
       "token-auth-scheme": "Bearer",
       "token-header": "AUTH-HEADER",
       "token-query-param": null,
-      "type": "JWT",
+      "type": "JWT_AUTHENTICATION",
       "verify-claims": [
         {
           "is-required": false,
