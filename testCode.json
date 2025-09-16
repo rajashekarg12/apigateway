@@ -1,5 +1,4 @@
 {
-   "path-prefix": "/testapi",
   "logging-policies": {
     "access-log": null,
     "execution-log": {
@@ -38,7 +37,7 @@
       "methods": [
         "GET"
       ],
-      "path": "/xyz/v1",
+      "path": "/xyz/v1/test",
       "request-policies": {
         "authorization": null,
         "body-validation": null,
