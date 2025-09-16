@@ -1,5 +1,4 @@
 {
-   "path-prefix": "/testcode25",
   "logging-policies": {
     "access-log": null,
     "execution-log": {
