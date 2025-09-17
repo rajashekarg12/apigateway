@@ -1,11 +1,11 @@
 {
   "routes": [
     {
-      "path": "/hello",
+      "path": "/hello2",
       "methods": ["GET"],
       "backend": {
         "type": "HTTP_BACKEND",
-        "url": "https://httpbin.org/get"
+        "url": "https://httpbi2n.org/get"
       }
     }
   ],
