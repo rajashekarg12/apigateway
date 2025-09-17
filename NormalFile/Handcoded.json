@@ -1,0 +1,18 @@
+{
+  "routes": [
+    {
+      "path": "/hello",
+      "methods": ["GET"],
+      "backend": {
+        "type": "HTTP_BACKEND",
+        "url": "https://httpbin.org/get"
+      }
+    }
+  ],
+  "loggingPolicies": {
+    "executionLog": {
+      "isEnabled": true,
+      "logLevel": "INFO"
+    }
+  }
+}
