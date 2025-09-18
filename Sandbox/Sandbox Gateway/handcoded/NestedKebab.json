@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "path": "/hello2",
+      "methods": ["GET"],
+      "backend": {
+        "type": "HTTP_BACKEND",
+        "url": "https://httpbi2n.org/get",
+        "logging-policies": {
+          "execution-log": {
+            "isEnabled": true,
+            "log-level": "INFO"           
+          }
+        }
+      }
+    }
+  ],
+  "loggingPolicies": {
+    "executionLog": {
+      "isEnabled": true,
+      "logLevel": "INFO"
+    }
+  }
+}
