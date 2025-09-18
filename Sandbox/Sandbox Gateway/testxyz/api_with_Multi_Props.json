@@ -20,7 +20,12 @@
         "is-ssl-verify-disabled": null,
         "max-cache-duration-in-hours": 2,
         "type": "REMOTE_JWKS",
-        "uri": "https://www.werwer.com"
+        "uri": "https://www.werwer.com",
+         "keys": [
+    {
+      "kid": "myRemoteKey",
+      "jwksUri": "https://www.werwer.com"
+    }]
       },
       "token-auth-scheme": "Bearer",
       "token-header": "AUTH-HEADER",
