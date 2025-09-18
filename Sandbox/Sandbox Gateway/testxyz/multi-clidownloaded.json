@@ -1,0 +1,134 @@
+{
+    "logging-policies": {
+        "access-log": null,
+        "execution-log": {
+            "is-enabled": null,
+            "log-level": "WARN"
+        }
+    },
+    "request-policies": {
+        "authentication": {
+            "audiences": [
+                "aaasd"
+            ],
+            "is-anonymous-access-allowed": false,
+            "issuers": [
+                "xvxvxb"
+            ],
+            "max-clock-skew-in-seconds": null,
+            "public-keys": {
+      
+                "is-ssl-verify-disabled": null,
+                "max-cache-duration-in-hours": 2,
+                "type": "REMOTE_JWKS",
+                "uri": "https://www.werwer.com"
+              
+            },
+            "token-auth-scheme": "Bearer",
+            "token-header": "AUTH-HEADER",
+            "token-query-param": null,
+            "type": "JWT_AUTHENTICATION",
+            "verify-claims": [
+                {
+                    "is-required": false,
+                    "key": "dgdf",
+                    "values": [
+                        "jkljkl"
+                    ]
+                }
+            ]
+        },
+        "cors": {
+            "allowed-headers": [
+                "CONTENT-TYPE"
+            ],
+            "allowed-methods": [
+                "GET",
+                "PUT",
+                "POST",
+                "DELETE"
+            ],
+            "allowed-origins": [
+                "*"
+            ],
+            "exposed-headers": [],
+            "is-allow-credentials-enabled": true,
+            "max-age-in-seconds": 30
+        },
+        "dynamic-authentication": null,
+        "mutual-tls": {
+            "allowed-sans": [],
+            "is-verified-certificate-required": false
+        },
+        "rate-limiting": {
+            "rate-in-requests-per-second": 200,
+            "rate-key": "Total"
+        },
+        "usage-plans": null
+    },
+    "routes": [
+        {
+            "backend": {
+                "connect-timeout-in-seconds": 70,
+                "is-ssl-verify-disabled": true,
+                "read-timeout-in-seconds": 20,
+                "send-timeout-in-seconds": 15,
+                "type": "HTTP_BACKEND",
+                "url": "https://dev-v3-oic-idzor6zhmigm-ia.integration.us-ashburn-1.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/ECHO/1.0/${request.path[val1]}"
+            },
+            "logging-policies": {
+                "access-log": null,
+                "execution-log": {
+                    "is-enabled": null,
+                    "log-level": null
+                }
+            },
+            "methods": [
+                "GET",
+                "POST"
+            ],
+            "path": "/xyz/{val1}",
+            "request-policies": {
+                "authorization": {
+                    "type": "AUTHENTICATION_ONLY"
+                },
+                "body-validation": null,
+                "cors": null,
+                "header-transformations": {
+                    "filter-headers": null,
+                    "rename-headers": null,
+                    "set-headers": {
+                        "items": [
+                            {
+                                "if-exists": "OVERWRITE",
+                                "name": "Authorization",
+                                "values": [
+                                    "Basic aW5kcmF5YW4uY2hha3JhYm9ydHlAZmxleGFnb24uY29tOk1hdHJpeEAxMjM0NQ=="
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "header-validations": null,
+                "query-parameter-transformations": null,
+                "query-parameter-validations": null,
+                "response-cache-lookup": null
+            },
+            "response-policies": {
+                "header-transformations": {
+                    "filter-headers": null,
+                    "rename-headers": {
+                        "items": [
+                            {
+                                "-from": "ssss",
+                                "to": "fffff"
+                            }
+                        ]
+                    },
+                    "set-headers": null
+                },
+                "response-cache-store": null
+            }
+        }
+    ]
+}
