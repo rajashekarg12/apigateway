@@ -3,7 +3,7 @@
         "access-log": null,
         "execution-log": {
             "is-enabled": null,
-            "log-level": "WARN"
+            "log-level": "INFO"
         }
     },
     "request-policies": {
@@ -13,7 +13,7 @@
             ],
             "is-anonymous-access-allowed": false,
             "issuers": [
-                "xvxvxb"
+                "xvxvxbml"
             ],
             "max-clock-skew-in-seconds": null,
             "public-keys": {
@@ -31,9 +31,9 @@
             "verify-claims": [
                 {
                     "is-required": false,
-                    "key": "dgdf",
+                    "key": "dgdfml",
                     "values": [
-                        "jkljkl"
+                        "jkljklml"
                     ]
                 }
             ]
@@ -120,8 +120,8 @@
                     "rename-headers": {
                         "items": [
                             {
-                                "-from": "ssss",
-                                "to": "fffff"
+                                "-from": "ssssml",
+                                "to": "ffffmlf"
                             }
                         ]
                     },
