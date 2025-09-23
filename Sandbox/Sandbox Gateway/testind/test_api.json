@@ -65,7 +65,7 @@
           "cache-key-additions": null,
           "is-enabled": true,
           "is-private-caching-enabled": false,
-          "type": "SIMPLE_LOOKUP_POLICY"
+          "type": "SimpleLookupPolicy"
         }
       },
       "response-policies": {
@@ -78,4 +78,5 @@
     }
   ]
 }
+
 
