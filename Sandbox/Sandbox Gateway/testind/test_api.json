@@ -28,7 +28,7 @@
     },
     "rate-limiting": {
       "rate-in-requests-per-second": 5,
-      "rate-key": "TOTAL"
+      "rate-key": "Total"
     },
     "usage-plans": null
   },
@@ -78,3 +78,4 @@
     }
   ]
 }
+
