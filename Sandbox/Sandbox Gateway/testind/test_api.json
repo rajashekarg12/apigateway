@@ -65,7 +65,8 @@
           "cache-key-additions": null,
           "is-enabled": true,
           "is-private-caching-enabled": false,
-          "type": "SimpleLookupPolicy"
+          "type": "SimpleLookupPolicy",
+          "Timestamp": 2025-09-23T09:54:37.065Z
         }
       },
       "response-policies": {
@@ -78,5 +79,6 @@
     }
   ]
 }
+
 
 
