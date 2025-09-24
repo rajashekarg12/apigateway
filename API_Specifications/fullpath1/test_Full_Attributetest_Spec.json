@@ -124,7 +124,7 @@
           "rename-headers": {
             "items": [
               {
-                "-from": "Testi89",
+                "from": "Testi89",
                 "to": "56"
               }
             ]
@@ -145,7 +145,7 @@
           "rename-query-parameters": {
             "items": [
               {
-                "-from": "ss",
+                "from": "ss",
                 "to": "tt"
               }
             ]
@@ -174,7 +174,7 @@
           "rename-headers": {
             "items": [
               {
-                "-from": "56",
+                "from": "56",
                 "to": "66"
               }
             ]
