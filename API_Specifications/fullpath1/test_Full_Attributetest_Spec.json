@@ -61,7 +61,7 @@
     },
     "rate-limiting": {
       "rate-in-requests-per-second": 50,
-      "rate-key": "TOTAL"
+      "rate-key": "Total"
     },
     "usage-plans": {
       "token-locations": [
