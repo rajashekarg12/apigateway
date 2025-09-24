@@ -61,7 +61,7 @@
     },
     "rate-limiting": {
       "rate-in-requests-per-second": 50,
-      "rate-key": "Total"
+      "rate-key": "TOTAL"
     },
     "usage-plans": {
       "token-locations": [
@@ -101,7 +101,7 @@
             }
           },
           "required": null,
-          "validation-mode": "Enforcing"
+          "validation-mode": "ENFORCING"
         },
         "cors": {
           "allowed-headers": [
@@ -124,7 +124,7 @@
           "rename-headers": {
             "items": [
               {
-                "from": "Testi89",
+                "-from": "Testi89",
                 "to": "56"
               }
             ]
@@ -138,14 +138,14 @@
               "required": null
             }
           ],
-          "validation-mode": "Enforcing"
+          "validation-mode": "ENFORCING"
         },
         "query-parameter-transformations": {
           "filter-query-parameters": null,
           "rename-query-parameters": {
             "items": [
               {
-                "from": "ss",
+                "-from": "ss",
                 "to": "tt"
               }
             ]
@@ -159,7 +159,7 @@
               "required": null
             }
           ],
-          "validation-mode": "Enforcing"
+          "validation-mode": "ENFORCING"
         },
         "response-cache-lookup": {
           "cache-key-additions": null,
@@ -174,7 +174,7 @@
           "rename-headers": {
             "items": [
               {
-                "from": "56",
+                "-from": "56",
                 "to": "66"
               }
             ]
