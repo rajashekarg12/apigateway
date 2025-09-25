@@ -41,9 +41,7 @@
         "Content-Type, Authorization"
       ],
       "allowed-methods": [
-        "GET",
-        "PUT",
-        "POST"
+        "GET"
       ],
       "allowed-origins": [
         "*"
