@@ -92,7 +92,10 @@
       "path": "/fulltest123",
       "request-policies": {
         "authorization": {
-          "type": "ANONYMOUS"
+          "allowed-scope": [
+            "test"
+          ],
+          "type": "ANY_OF"
         },
         "body-validation": {
           "content": {
