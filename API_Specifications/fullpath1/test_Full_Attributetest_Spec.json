@@ -3,17 +3,17 @@
     "access-log": null,
     "execution-log": {
       "is-enabled": null,
-      "log-level": "WARN"
+      "log-level": "INFO"
     }
   },
   "request-policies": {
     "authentication": {
       "audiences": [
-        "userd4"
+        "userd5"
       ],
       "is-anonymous-access-allowed": true,
       "issuers": [
-        "user2"
+        "user3"
       ],
       "max-clock-skew-in-seconds": null,
       "public-keys": {
@@ -29,9 +29,9 @@
       "verify-claims": [
         {
           "is-required": false,
-          "key": "hhhhh",
+          "key": "hhhhhmlllll",
           "values": [
-            "fdddss"
+            "fdddssmllllll"
           ]
         }
       ]
@@ -41,7 +41,8 @@
         "Content-Type, Authorization"
       ],
       "allowed-methods": [
-        "GET"
+        "GET",
+        "PATCH"
       ],
       "allowed-origins": [
         "*"
@@ -58,7 +59,7 @@
       "is-verified-certificate-required": false
     },
     "rate-limiting": {
-      "rate-in-requests-per-second": 50,
+      "rate-in-requests-per-second": 60,
       "rate-key": "TOTAL"
     },
     "usage-plans": {
@@ -85,7 +86,8 @@
         }
       },
       "methods": [
-        "GET"
+        "GET",
+        "PATCH"
       ],
       "path": "/fulltest123",
       "request-policies": {
