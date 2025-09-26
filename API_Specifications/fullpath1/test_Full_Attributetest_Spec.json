@@ -70,31 +70,12 @@
   "routes": [
     {
       "backend": {
-        "routing-backends": [
-          {
-            "backend": {
-              "connect-timeout-in-seconds": 60.0,
-              "is-ssl-verify-disabled": false,
-              "read-timeout-in-seconds": 10.0,
-              "send-timeout-in-seconds": 10.0,
-              "type": "HTTP_BACKEND",
-              "url": "https://www.google.com"
-            },
-            "key": {
-              "is-default": null,
-              "name": "test",
-              "type": "ANY_OF",
-              "values": [
-                "test5"
-              ]
-            }
-          }
-        ],
-        "selection-source": {
-          "selector": "request.auth[test56]",
-          "type": "SINGLE"
-        },
-        "type": "DYNAMIC_ROUTING_BACKEND"
+        "connect-timeout-in-seconds": 10.0,
+        "is-ssl-verify-disabled": false,
+        "read-timeout-in-seconds": 10.0,
+        "send-timeout-in-seconds": 10.0,
+        "type": "HTTP_BACKEND",
+        "url": "https://dev-v3-oic-idzor6zhmigm-ia.integration.us-ashburn-1.ocp.oraclecloud.com/ic/api/integration/v1/flows/rest/"
       },
       "logging-policies": {
         "access-log": null,
