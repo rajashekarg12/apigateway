@@ -1,0 +1,210 @@
+{
+	"logging-policies": {
+		"access-log": null,
+		"execution-log": {
+			"is-enabled": null,
+			"log-level": "WARN"
+		}
+	},
+	"request-policies": {
+		"authentication": {
+			"audiences": [
+				"userd4"
+			],
+			"is-anonymous-access-allowed": true,
+			"issuers": [
+				"user2"
+			],
+			"max-clock-skew-in-seconds": null,
+			"public-keys": {
+				"is-ssl-verify-disabled": true,
+				"max-cache-duration-in-hours": 1,
+				"type": "REMOTE_JWKS",
+				"uri": "https://www.googleapis.com/oauth2/v3/certs"
+			},
+			"token-auth-scheme": null,
+			"token-header": null,
+			"token-query-param": "Bearer",
+			"type": "JWT_AUTHENTICATION",
+			"verify-claims": [
+				{
+					"is-required": false,
+					"key": "hhhhh",
+					"values": [
+						"fdddss"
+					]
+				}
+			]
+		},
+		"cors": {
+			"allowed-headers": [
+				"Content-Type, Authorization"
+			],
+			"allowed-methods": [
+				"GET",
+				"PUT",
+				"POST"
+			],
+			"allowed-origins": [
+				"*"
+			],
+			"exposed-headers": [
+				"X-Test-Header"
+			],
+			"is-allow-credentials-enabled": true,
+			"max-age-in-seconds": 52
+		},
+		"dynamic-authentication": null,
+		"mutual-tls": {
+			"allowed-sans": [],
+			"is-verified-certificate-required": false
+		},
+		"rate-limiting": {
+			"rate-in-requests-per-second": 50,
+			"rate-key": "Total"
+		},
+		"usage-plans": {
+			"token-locations": [
+				"request.headers[X-Client-Token]"
+			]
+		}
+	},
+	"routes": [
+		{
+			"backend": {
+				"routing-backends": [
+					{
+						"backend": {
+							"connect-timeout-in-seconds": 56.0,
+							"is-ssl-verify-disabled": true,
+							"read-timeout-in-seconds": 55.0,
+							"send-timeout-in-seconds": 55.0,
+							"type": "HTTP_BACKEND",
+							"url": "https://www.google.com"
+						},
+						"key": {
+							"is-default": true,
+							"name": "type1",
+							"type": "ANY_OF",
+							"values": [
+								"56"
+							]
+						}
+					}
+				],
+				"selection-source": {
+					"selector": "request.auth[test56]",
+					"type": "SINGLE"
+				},
+				"type": "DYNAMIC_ROUTING_BACKEND"
+			},
+			"logging-policies": {
+				"access-log": null,
+				"execution-log": {
+					"is-enabled": null,
+					"log-level": "INFO"
+				}
+			},
+			"methods": [
+				"GET"
+			],
+			"path": "/fulltest123",
+			"request-policies": {
+				"authorization": {
+					"type": "ANONYMOUS"
+				},
+				"body-validation": {
+					"content": {
+						"application/json": {
+							"validation-type": "NONE"
+						}
+					},
+					"required": null,
+					"validation-mode": "ENFORCING"
+				},
+				"cors": {
+					"allowed-headers": [
+						"Content-Type"
+					],
+					"allowed-methods": [
+						"GET"
+					],
+					"allowed-origins": [
+						"*"
+					],
+					"exposed-headers": [
+						"X-Test-Header"
+					],
+					"is-allow-credentials-enabled": true,
+					"max-age-in-seconds": 89
+				},
+				"header-transformations": {
+					"filter-headers": null,
+					"rename-headers": {
+						"items": [
+							{
+								"-from": "Testi89",
+								"to": "56"
+							}
+						]
+					},
+					"set-headers": null
+				},
+				"header-validations": {
+					"headers": [
+						{
+							"name": "Sonar",
+							"required": null
+						}
+					],
+					"validation-mode": "ENFORCING"
+				},
+				"query-parameter-transformations": {
+					"filter-query-parameters": null,
+					"rename-query-parameters": {
+						"items": [
+							{
+								"-from": "ss",
+								"to": "tt"
+							}
+						]
+					},
+					"set-query-parameters": null
+				},
+				"query-parameter-validations": {
+					"parameters": [
+						{
+							"name": "Sonar2",
+							"required": null
+						}
+					],
+					"validation-mode": "ENFORCING"
+				},
+				"response-cache-lookup": {
+					"cache-key-additions": null,
+					"is-enabled": true,
+					"is-private-caching-enabled": true,
+					"type": "SIMPLE_LOOKUP_POLICY"
+				}
+			},
+			"response-policies": {
+				"header-transformations": {
+					"filter-headers": null,
+					"rename-headers": {
+						"items": [
+							{
+								"-from": "56",
+								"to": "66"
+							}
+						]
+					},
+					"set-headers": null
+				},
+				"response-cache-store": {
+					"time-to-live-in-seconds": 6,
+					"type": "FIXED_TTL_STORE_POLICY"
+				}
+			}
+		}
+	]
+}
