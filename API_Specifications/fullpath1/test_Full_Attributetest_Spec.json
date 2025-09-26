@@ -70,12 +70,31 @@
   "routes": [
     {
       "backend": {
-        "connect-timeout-in-seconds": 52.0,
-        "is-ssl-verify-disabled": true,
-        "read-timeout-in-seconds": 55.0,
-        "send-timeout-in-seconds": 52.0,
-        "type": "HTTP_BACKEND",
-        "url": "https://asdafsdfsdfsdfsdpqm4siu.apigateway.us-ashburn-1.oci.customer-oci.com/ic/api/integration/v1/flows/rest/ECHO/1.0/${request.path[val1]}"
+        "routing-backends": [
+          {
+            "backend": {
+              "connect-timeout-in-seconds": 60.0,
+              "is-ssl-verify-disabled": false,
+              "read-timeout-in-seconds": 10.0,
+              "send-timeout-in-seconds": 10.0,
+              "type": "HTTP_BACKEND",
+              "url": "https://www.google.com"
+            },
+            "key": {
+              "is-default": null,
+              "name": "test",
+              "type": "ANY_OF",
+              "values": [
+                "test5"
+              ]
+            }
+          }
+        ],
+        "selection-source": {
+          "selector": "request.auth[test56]",
+          "type": "SINGLE"
+        },
+        "type": "DYNAMIC_ROUTING_BACKEND"
       },
       "logging-policies": {
         "access-log": null,
